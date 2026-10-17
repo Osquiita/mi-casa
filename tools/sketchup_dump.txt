@@ -1,0 +1,61 @@
+=== RESUMEN ENTIDADES SKETCHUP ===
+Total entidades: 95
+GROUP [0]: Name='PLANO_GUIA_FONDO (Desbloquear si deseas moverlo)', Layer='00_PLANO_GUIA_PNG', Min=(-1.5, -3.8, -0.01), Max=(12.9, 19.04, -0.01), W=14.4, H=22.84, D=0.0
+GROUP [1]: Name='Suelo_Pasillo', Layer='02_SUELOS_ZONAS', Min=(0.0, 0.0, 0.0), Max=(1.2, 12.5, 0.0), W=1.2, H=12.5, D=0.0
+GROUP [2]: Name='Suelo_Salon_Comedor', Layer='02_SUELOS_ZONAS', Min=(1.2, 0.0, 0.0), Max=(6.4, 7.4, 0.0), W=5.2, H=7.4, D=0.0
+GROUP [3]: Name='Suelo_Cocina', Layer='02_SUELOS_ZONAS', Min=(6.4, 0.0, 0.0), Max=(10.4, 5.0, 0.0), W=4.0, H=5.0, D=0.0
+GROUP [4]: Name='Suelo_Escalera_PA', Layer='02_SUELOS_ZONAS', Min=(10.4, 0.0, 0.0), Max=(11.4, 5.0, 0.0), W=1.0, H=5.0, D=0.0
+GROUP [5]: Name='Suelo_Porche_Cubierto', Layer='02_SUELOS_ZONAS', Min=(6.4, 5.0, 0.0), Max=(11.4, 7.4, 0.0), W=5.0, H=2.4, D=0.0
+GROUP [6]: Name='Suelo_Patio', Layer='02_SUELOS_ZONAS', Min=(6.4, 7.4, 0.0), Max=(11.4, 13.0, 0.0), W=5.0, H=5.6, D=0.0
+GROUP [7]: Name='Piscina_Privada_2.50x3.60', Layer='03_PISCINA_PATIO', Min=(7.4, 8.5, 0.0), Max=(9.9, 12.1, 0.0), W=2.5, H=3.6, D=0.0
+GROUP [8]: Name='Suelo_Bano_Comun', Layer='02_SUELOS_ZONAS', Min=(1.2, 7.4, 0.0), Max=(3.8, 9.8, 0.0), W=2.6, H=2.4, D=0.0
+GROUP [9]: Name='Suelo_Bano_Suite', Layer='02_SUELOS_ZONAS', Min=(3.8, 7.4, 0.0), Max=(6.4, 9.8, 0.0), W=2.6, H=2.4, D=0.0
+GROUP [10]: Name='Suelo_Dormitorio_1_Suite', Layer='02_SUELOS_ZONAS', Min=(1.2, 9.8, 0.0), Max=(6.4, 12.5, 0.0), W=5.2, H=2.7, D=0.0
+GROUP [11]: Name='Suelo_Distribuidor_Transversal', Layer='02_SUELOS_ZONAS', Min=(0.0, 12.5, 0.0), Max=(6.4, 13.5, 0.0), W=6.4, H=1.0, D=0.0
+GROUP [12]: Name='Suelo_Dormitorio_2', Layer='02_SUELOS_ZONAS', Min=(0.0, 13.5, 0.0), Max=(3.2, 17.6, 0.0), W=3.2, H=4.1, D=0.0
+GROUP [13]: Name='Suelo_Dormitorio_3', Layer='02_SUELOS_ZONAS', Min=(3.2, 13.5, 0.0), Max=(6.4, 17.6, 0.0), W=3.2, H=4.1, D=0.0
+GROUP [14]: Name='Suelo_Gran_Cochera', Layer='02_SUELOS_ZONAS', Min=(6.4, 13.0, 0.0), Max=(11.4, 17.6, 0.0), W=5.0, H=4.6, D=0.0
+GROUP [15]: Name='Medianera_Oeste (17.60m)', Layer='01_MUROS_EDITABLES', Min=(-0.15, -0.15, 0.0), Max=(0.15, 17.75, 1.2), W=0.3, H=17.9, D=1.2
+GROUP [16]: Name='Medianera_Este (17.60m)', Layer='01_MUROS_EDITABLES', Min=(11.25, -0.15, 0.0), Max=(11.55, 17.75, 1.2), W=0.3, H=17.9, D=1.2
+GROUP [17]: Name='Muro_Portal_A', Layer='01_MUROS_EDITABLES', Min=(-0.15, -0.15, 0.0), Max=(0.3, 0.15, 1.2), W=0.45, H=0.3, D=1.2
+GROUP [18]: Name='Muro_Sur_Salon_1', Layer='01_MUROS_EDITABLES', Min=(1.2, -0.15, 0.0), Max=(2.6, 0.15, 1.2), W=1.4, H=0.3, D=1.2
+GROUP [19]: Name='Muro_Sur_Salon_2', Layer='01_MUROS_EDITABLES', Min=(4.4, -0.15, 0.0), Max=(4.8, 0.15, 1.2), W=0.4, H=0.3, D=1.2
+GROUP [20]: Name='Muro_Sur_Cocina_1', Layer='01_MUROS_EDITABLES', Min=(6.0, -0.15, 0.0), Max=(6.9, 0.15, 1.2), W=0.9, H=0.3, D=1.2
+GROUP [21]: Name='Muro_Sur_Cocina_2', Layer='01_MUROS_EDITABLES', Min=(8.1, -0.15, 0.0), Max=(8.9, 0.15, 1.2), W=0.8, H=0.3, D=1.2
+GROUP [22]: Name='Muro_Sur_EscaleraB', Layer='01_MUROS_EDITABLES', Min=(9.9, -0.15, 0.0), Max=(10.4, 0.15, 1.2), W=0.5, H=0.3, D=1.2
+GROUP [23]: Name='Muro_Norte_Dorm2', Layer='01_MUROS_EDITABLES', Min=(-0.15, 17.45, 0.0), Max=(0.8, 17.75, 1.2), W=0.95, H=0.3, D=1.2
+GROUP [24]: Name='Muro_Norte_Centro_D2_D3', Layer='01_MUROS_EDITABLES', Min=(2.4, 17.45, 0.0), Max=(3.6, 17.75, 1.2), W=1.2, H=0.3, D=1.2
+GROUP [25]: Name='Muro_Norte_Dorm3', Layer='01_MUROS_EDITABLES', Min=(5.2, 17.45, 0.0), Max=(6.4, 17.75, 1.2), W=1.2, H=0.3, D=1.2
+GROUP [26]: Name='Tabique_Pasillo_Salon_Sur', Layer='01_MUROS_EDITABLES', Min=(1.15, 0.0, 0.0), Max=(1.25, 1.4, 1.2), W=0.1, H=1.4, D=1.2
+GROUP [27]: Name='Mocheta_Sur_Salon_Cocina', Layer='01_MUROS_EDITABLES', Min=(6.35, 0.0, 0.0), Max=(6.45, 0.8, 1.2), W=0.1, H=0.8, D=1.2
+GROUP [28]: Name='Mocheta_Norte_Salon_Cocina', Layer='01_MUROS_EDITABLES', Min=(6.35, 4.2, 0.0), Max=(6.45, 5.0, 1.2), W=0.1, H=0.8, D=1.2
+GROUP [29]: Name='Tabique_Cocina_EscaleraB', Layer='01_MUROS_EDITABLES', Min=(10.35, 0.0, 0.0), Max=(10.45, 5.0, 1.2), W=0.1, H=5.0, D=1.2
+GROUP [30]: Name='Tabique_Salon_Banos', Layer='01_MUROS_EDITABLES', Min=(1.15, 7.35, 0.0), Max=(6.4, 7.45, 1.2), W=5.25, H=0.1, D=1.2
+GROUP [31]: Name='Muro_Tecnico_Banos_Compartido', Layer='01_MUROS_EDITABLES', Min=(3.72, 7.35, 0.0), Max=(3.88, 9.8, 1.2), W=0.16, H=2.45, D=1.2
+GROUP [32]: Name='Muro_Patio_BanoSuite_Sur', Layer='01_MUROS_EDITABLES', Min=(6.3, 7.35, 0.0), Max=(6.5, 7.6, 1.2), W=0.2, H=0.25, D=1.2
+GROUP [33]: Name='Muro_Patio_BanoSuite_Centro', Layer='01_MUROS_EDITABLES', Min=(6.3, 8.4, 0.0), Max=(6.5, 8.75, 1.2), W=0.2, H=0.35, D=1.2
+GROUP [34]: Name='Muro_Patio_Dorm1_Sur', Layer='01_MUROS_EDITABLES', Min=(6.3, 9.55, 0.0), Max=(6.5, 10.4, 1.2), W=0.2, H=0.85, D=1.2
+GROUP [35]: Name='Muro_Patio_Dorm1_Norte', Layer='01_MUROS_EDITABLES', Min=(6.3, 12.4, 0.0), Max=(6.5, 12.6, 1.2), W=0.2, H=0.2, D=1.2
+GROUP [36]: Name='Tabique_BanoComun_Dorm1', Layer='01_MUROS_EDITABLES', Min=(1.15, 9.75, 0.0), Max=(3.9, 9.85, 1.2), W=2.75, H=0.1, D=1.2
+GROUP [37]: Name='Tabique_BanoSuite_Dorm1', Layer='01_MUROS_EDITABLES', Min=(4.7, 9.75, 0.0), Max=(6.4, 9.85, 1.2), W=1.7, H=0.1, D=1.2
+GROUP [38]: Name='Tabique_Pasillo_Dorm1_Sur', Layer='01_MUROS_EDITABLES', Min=(1.15, 9.75, 0.0), Max=(1.25, 10.55, 1.2), W=0.1, H=0.8, D=1.2
+GROUP [39]: Name='Tabique_Pasillo_Dorm1_Norte', Layer='01_MUROS_EDITABLES', Min=(1.15, 11.4, 0.0), Max=(1.25, 12.5, 1.2), W=0.1, H=1.1, D=1.2
+GROUP [40]: Name='Tabique_Dorm1_Distribuidor', Layer='01_MUROS_EDITABLES', Min=(1.15, 12.55, 0.0), Max=(4.35, 12.59, 1.2), W=3.2, H=0.04, D=1.2
+GROUP [41]: Name='Tabique_Distribuidor_Dorm2_Oeste', Layer='01_MUROS_EDITABLES', Min=(-0.15, 13.45, 0.0), Max=(0.8, 13.55, 1.2), W=0.95, H=0.1, D=1.2
+GROUP [42]: Name='Tabique_Distribuidor_Centro_D2_D3', Layer='01_MUROS_EDITABLES', Min=(1.41, 13.5, 0.0), Max=(3.71, 13.55, 1.2), W=2.3, H=0.05, D=1.2
+GROUP [43]: Name='Tabique_Distribuidor_Dorm3_Este', Layer='01_MUROS_EDITABLES', Min=(4.32, 13.45, 0.0), Max=(6.3, 13.55, 1.2), W=1.98, H=0.1, D=1.2
+GROUP [44]: Name='Tabique_Medianero_Dorm2_Dorm3', Layer='01_MUROS_EDITABLES', Min=(3.15, 13.45, 0.0), Max=(3.25, 17.6, 1.2), W=0.1, H=4.15, D=1.2
+GROUP [45]: Name='Muro_Oeste_Gran_Cochera', Layer='01_MUROS_EDITABLES', Min=(6.3, 13.0, 0.0), Max=(6.5, 17.6, 1.2), W=0.2, H=4.6, D=1.2
+GROUP [46]: Name='Pilar_Porche_1', Layer='01_MUROS_EDITABLES', Min=(6.9, 7.25, 0.0), Max=(7.15, 7.5, 1.2), W=0.25, H=0.25, D=1.2
+GROUP [47]: Name='Pilar_Porche_2', Layer='01_MUROS_EDITABLES', Min=(9.4, 7.25, 0.0), Max=(9.65, 7.5, 1.2), W=0.25, H=0.25, D=1.2
+FACE [52]: Layer='Layer0', Min=(4.32, 12.55), Max=(4.35, 13.45)
+FACE [57]: Layer='Layer0', Min=(6.3, 12.4), Max=(6.3, 13.0)
+FACE [62]: Layer='Layer0', Min=(6.5, 12.4), Max=(6.5, 13.0)
+FACE [66]: Layer='Layer0', Min=(0.15, 2.42), Max=(1.18, 6.01)
+FACE [70]: Layer='Layer0', Min=(1.2, 2.42), Max=(1.2, 6.01)
+FACE [75]: Layer='Layer0', Min=(0.15, 2.42), Max=(1.18, 2.42)
+FACE [76]: Layer='Layer0', Min=(1.18, 2.42), Max=(1.18, 6.01)
+FACE [84]: Layer='Layer0', Min=(1.18, 6.01), Max=(1.2, 6.01)
+FACE [86]: Layer='Layer0', Min=(1.18, 6.01), Max=(1.2, 6.01)
+FACE [89]: Layer='Layer0', Min=(1.18, 2.42), Max=(1.2, 6.01)
+FACE [94]: Layer='Layer0', Min=(1.18, 6.01), Max=(1.2, 6.01)

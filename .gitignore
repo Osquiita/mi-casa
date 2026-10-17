@@ -1,0 +1,52 @@
+# ==============================================================================
+# .gitignore para Proyecto Arquitectónico 'mi-casa'
+# Repositorio optimizado para código fuente, automatización e importación en Gemini Web
+# ==============================================================================
+
+# Archivos comprimidos pesados
+*.zip
+*.tar
+*.gz
+*.7z
+
+# Software ejecutable de Blender
+tools/blender-5.2.0-windows-x64/
+*.exe
+*.dll
+
+# Modelos y entornos 3D binarios pesados (conservados en el ZIP completo de 396MB)
+*.blend
+*.blend1
+*.blend2
+*.blend@
+*.exr
+*.hdr
+*.skp
+*.skb
+*.layout
+entrega/modelo-3d/
+
+# Renders e imágenes pesadas (conservados en el ZIP completo)
+*.png
+*.jpg
+*.jpeg
+
+# PDFs pesados duplicados o borradores (los tomos oficiales están en 00_PROYECTO_FINAL_LICENCIA_AYUNTAMIENTO)
+entrega/planos/*.pdf
+entrega/documentacion/*.pdf
+
+# Cachés de Python y entornos
+__pycache__/
+*.py[cod]
+*$py.class
+*.env
+.venv/
+env/
+
+# Temporales del sistema
+*~
+*.bak
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.tmp
