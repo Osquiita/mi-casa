@@ -42,7 +42,7 @@ C_FLOOR_PORCH   = "#F5EFE6"
 
 def setup_architect_canvas():
     fig, ax = plt.subplots(figsize=(22, 15.5), dpi=300)
-    ax.set_xlim(-5.2, 17.2)
+    ax.set_xlim(-5.6, 17.2)
     ax.set_ylim(-5.5, 21.8)
     ax.set_aspect('equal')
     ax.axis('off')
@@ -421,7 +421,7 @@ def generar_plano_v6_suite_optimizada():
     ax.text(6.45, 17.00, "WALLBOX", ha='right', va='center', fontsize=4.8, weight='bold', color="#0284C7", zorder=7)
 
     # 6. COTAS EXTERIORES
-    y_s1, y_s2, y_s3 = -0.80, -1.55, -2.30
+    y_s1, y_s2, y_s3 = -0.90, -1.65, -2.40
     draw_cota_arch_h(ax, -0.15, 0.30, y_s1, "0.45")
     draw_cota_arch_h(ax, 0.30, 1.20, y_s1, "0.90 (P)")
     draw_cota_arch_h(ax, 1.20, 2.60, y_s1, "1.40")
@@ -433,11 +433,11 @@ def generar_plano_v6_suite_optimizada():
     draw_cota_arch_h(ax, 8.10, 8.90, y_s1, "0.80")
     draw_cota_arch_h(ax, 8.90, 9.90, y_s1, "1.00 (V)")
     draw_cota_arch_h(ax, 9.90, 10.40, y_s1, "0.50")
-    draw_cota_arch_h(ax, 10.40, 11.40, y_s1, "1.00 (P)")
+    draw_cota_arch_h(ax, 10.40, 11.25, y_s1, "0.85 (P)")
 
-    draw_cota_arch_h(ax, -0.15, 6.40, y_s2, "6.55 m (VIVIENDA A)")
-    draw_cota_arch_h(ax, 6.40, 11.45, y_s2, "5.05 m (ZONA DÍA / ACCESO PA)")
-    draw_cota_arch_h(ax, -0.15, 11.45, y_s3, "11.60 m (ANCHURA TOTAL SOLAR)")
+    draw_cota_arch_h(ax, -0.15, 6.40, y_s2, "6.55 m (VIVIENDA PB)")
+    draw_cota_arch_h(ax, 6.40, 11.25, y_s2, "4.85 m (ZONA DÍA / ACCESO PA)")
+    draw_cota_arch_h(ax, -0.15, 11.25, y_s3, "11,40 m (ANCHURA TOTAL SOLAR)")
 
     # --- FACHADA NORTE ---
     y_n1, y_n2 = 18.25, 19.00
@@ -447,21 +447,21 @@ def generar_plano_v6_suite_optimizada():
     draw_cota_arch_h(ax, 3.60, 5.20, y_n1, "1.60 (V)")
     draw_cota_arch_h(ax, 5.20, 6.40, y_n1, "1.20")
     draw_cota_arch_h(ax, 6.40, 11.25, y_n1, "4.85 (Portón)")
-    draw_cota_arch_h(ax, -0.15, 11.45, y_n2, "11.60 m (FACHADA NORTE)")
+    draw_cota_arch_h(ax, -0.15, 11.25, y_n2, "11,40 m (FACHADA NORTE)")
 
     # --- LATERALES ---
     x_o1, x_o2 = -0.80, -1.60
     draw_cota_arch_v(ax, -0.15, 7.35, x_o1, "7.50 m (Salón)")
     draw_cota_arch_v(ax, 7.35, 13.45, x_o1, "6.10 m (Pasillo/Suite)")
-    draw_cota_arch_v(ax, 13.45, 17.60, x_o1, "4.15 m (Dormitorio 2)")
-    draw_cota_arch_v(ax, -0.15, 17.60, x_o2, "17.75 m (LONGITUD TOTAL)")
+    draw_cota_arch_v(ax, 13.45, 17.45, x_o1, "4.00 m (Dormitorio 2)")
+    draw_cota_arch_v(ax, -0.15, 17.45, x_o2, "17,60 m (LONGITUD TOTAL SOLAR)")
 
     x_e1, x_e2 = 12.00, 12.85
     draw_cota_arch_v(ax, -0.15, 5.00, x_e1, "5.15 m (Cocina + Escalera)")
     draw_cota_arch_v(ax, 5.00, 7.40, x_e1, "2.40 m (Porche)")
     draw_cota_arch_v(ax, 7.40, 13.00, x_e1, "5.60 m (Patio + Piscina)")
-    draw_cota_arch_v(ax, 13.00, 17.60, x_e1, "4.60 m (Gran Cochera)")
-    draw_cota_arch_v(ax, -0.15, 17.60, x_e2, "17.75 m (MEDIANERA ESTE)")
+    draw_cota_arch_v(ax, 13.00, 17.45, x_e1, "4.45 m (Gran Cochera)")
+    draw_cota_arch_v(ax, -0.15, 17.45, x_e2, "17,60 m (MEDIANERA ESTE)")
 
     # 7. COTAS INTERIORES EXACTAS (CON LA NUEVA MASTER SUITE)
     # Salón
@@ -471,7 +471,7 @@ def generar_plano_v6_suite_optimizada():
 
     # Cocina
     draw_cota_arch_h(ax, 6.45, 10.35, 4.60, "3.90 m")
-    draw_cota_arch_v(ax, 0.15, 4.95, 10.00, "4.80 m")
+    draw_cota_arch_v(ax, 0.15, 4.95, 6.65, "4.80 m")
 
     # Baños Cuadrados
     draw_cota_arch_h(ax, 1.25, 3.72, 8.85, "2.47 m")
@@ -484,7 +484,7 @@ def generar_plano_v6_suite_optimizada():
     draw_cota_arch_v(ax, 9.85, 12.75, 1.55, "2.90 m fondo")
     draw_cota_arch_h(ax, 1.25, 1.95, 11.20, "0.70 m paso")
     draw_cota_arch_h(ax, 3.95, 4.70, 11.20, "0.75 m paso")
-    draw_cota_arch_v(ax, 9.85, 10.75, 2.95, "0.90 m pie cama")
+    draw_cota_arch_v(ax, 9.85, 10.75, 1.65, "0.90 m pie cama")
 
     # Dormitorios 2 y 3
     draw_cota_arch_h(ax, 0.15, 3.15, 17.10, "3.00 m")
@@ -494,7 +494,7 @@ def generar_plano_v6_suite_optimizada():
 
     # Gran Cochera
     draw_cota_arch_h(ax, 6.50, 11.25, 13.50, "4.75 m")
-    draw_cota_arch_v(ax, 13.00, 17.45, 6.65, "4.45 m")
+    draw_cota_arch_v(ax, 13.00, 17.45, 7.00, "4.45 m")
 
     # Patio y Piscina
     draw_cota_arch_h(ax, 6.50, 11.25, 7.70, "4.75 m")
@@ -519,13 +519,13 @@ def generar_plano_v6_suite_optimizada():
             bbox=dict(boxstyle='square,pad=0.08', facecolor='#FFFFFF', edgecolor='none', alpha=0.85))
 
     # 9. ACCESOS Y SÍMBOLOS
-    ax.annotate('ACCESO VIVIENDA A', xy=(0.75, 0.00), xytext=(0.75, -0.50),
-                arrowprops=dict(facecolor=C_TEXT_MAIN, edgecolor=C_TEXT_MAIN, width=1.5, headwidth=5),
-                ha='center', va='top', fontsize=6.0, weight='bold', color=C_TEXT_MAIN, zorder=30)
+    ax.annotate('ACCESO VIVIENDA PB', xy=(0.75, 0.00), xytext=(0.75, -0.45),
+                arrowprops=dict(facecolor=C_TEXT_MAIN, edgecolor=C_TEXT_MAIN, width=1.2, headwidth=4),
+                ha='center', va='top', fontsize=5.5, weight='bold', color=C_TEXT_MAIN, zorder=30)
 
-    ax.annotate('ACCESO PLANTA ALTA (B)', xy=(10.85, 0.00), xytext=(10.85, -0.50),
-                arrowprops=dict(facecolor=C_TEXT_MAIN, edgecolor=C_TEXT_MAIN, width=1.5, headwidth=5),
-                ha='center', va='top', fontsize=6.0, weight='bold', color=C_TEXT_MAIN, zorder=30)
+    ax.annotate('ACCESO PLANTA ALTA', xy=(10.85, 0.00), xytext=(10.85, -0.45),
+                arrowprops=dict(facecolor=C_TEXT_MAIN, edgecolor=C_TEXT_MAIN, width=1.2, headwidth=4),
+                ha='center', va='top', fontsize=5.5, weight='bold', color=C_TEXT_MAIN, zorder=30)
 
     ax.annotate('ACCESO VEHICULAR', xy=(8.82, 17.65), xytext=(8.82, 18.05),
                 arrowprops=dict(facecolor=C_TEXT_MAIN, edgecolor=C_TEXT_MAIN, width=1.5, headwidth=5),
@@ -586,7 +586,7 @@ def generar_plano_v6_suite_optimizada():
     draw_rect(ax, caj_x, caj_y, caj_w, caj_h, "#FFFFFF", edge_col=C_WALL, lw=1.3, z=40)
     
     ax.plot([caj_x + 6.9, caj_x + 6.9], [caj_y, caj_y + caj_h], color=C_WALL, lw=0.8, zorder=41)
-    ax.plot([caj_x + 15.6, caj_x + 15.6], [caj_y, caj_y + caj_h], color=C_WALL, lw=0.8, zorder=41)
+    ax.plot([caj_x + 16.0, caj_x + 16.0], [caj_y, caj_y + caj_h], color=C_WALL, lw=0.8, zorder=41)
     ax.plot([caj_x + 18.9, caj_x + 18.9], [caj_y, caj_y + caj_h], color=C_WALL, lw=0.8, zorder=41)
 
     # Bloque 1: Identificación del Proyecto
@@ -595,14 +595,14 @@ def generar_plano_v6_suite_optimizada():
     ax.text(caj_x + 0.25, caj_y + 0.42, "Calle Moreno Torroba s/n · Palma del Río (Córdoba)", fontsize=6.8, weight='bold', color="#1E40AF", zorder=42)
 
     # Bloque 2: Datos del Plano
-    ax.text(caj_x + 7.15, caj_y + 1.28, "PLANO: P-01 PLANTA BAJA AMUEBLADA Y ACOTADA", fontsize=8.2, weight='bold', color=C_TEXT_MAIN, zorder=42)
-    ax.text(caj_x + 7.15, caj_y + 0.85, "Distribución Optimizada · Master Suite con Pasos Amplios + Garaje Trasero", fontsize=6.4, color=C_TEXT_SEC, zorder=42)
-    ax.text(caj_x + 7.15, caj_y + 0.42, "S.Útil: 140,43 m² | Ocupación: 160,51 m² (80,0 % PGOU) | Patio: 40,13 m²", fontsize=6.4, weight='bold', color=C_TEXT_MAIN, zorder=42)
+    ax.text(caj_x + 7.15, caj_y + 1.28, "PLANO: P-01 PLANTA BAJA AMUEBLADA Y ACOTADA", fontsize=7.4, weight='bold', color=C_TEXT_MAIN, zorder=42)
+    ax.text(caj_x + 7.15, caj_y + 0.85, "Distribución Optimizada · Master Suite con Pasos Amplios + Garaje Trasero", fontsize=5.8, color=C_TEXT_SEC, zorder=42)
+    ax.text(caj_x + 7.15, caj_y + 0.42, "S.Útil: 140,43 m² | Ocupación: 160,51 m² (80,0 % PGOU) | Patio: 40,13 m²", fontsize=5.8, weight='bold', color=C_TEXT_MAIN, zorder=42)
 
     # Bloque 3: Escala y Fecha
-    ax.text(caj_x + 15.80, caj_y + 1.28, "ESCALA: 1:50", fontsize=8.0, weight='bold', color=C_TEXT_MAIN, zorder=42)
-    ax.text(caj_x + 15.80, caj_y + 0.85, "FECHA: Octubre 2026", fontsize=6.6, color=C_TEXT_SEC, zorder=42)
-    ax.text(caj_x + 15.80, caj_y + 0.42, "FORMATO: DIN A3", fontsize=6.6, color=C_TEXT_SEC, zorder=42)
+    ax.text(caj_x + 16.20, caj_y + 1.28, "ESCALA: 1:50", fontsize=8.0, weight='bold', color=C_TEXT_MAIN, zorder=42)
+    ax.text(caj_x + 16.20, caj_y + 0.85, "FECHA: Octubre 2026", fontsize=6.6, color=C_TEXT_SEC, zorder=42)
+    ax.text(caj_x + 16.20, caj_y + 0.42, "FORMATO: DIN A3", fontsize=6.6, color=C_TEXT_SEC, zorder=42)
 
     # Bloque 4: Número de Plano
     draw_rect(ax, caj_x + 18.6, caj_y, 3.20, caj_h, C_WALL, edge_col=C_WALL, z=41)

@@ -147,12 +147,12 @@ class DossierPDF(FPDF):
         self.cell(w2, 5.5, c2, border=1, align="R", fill=bg, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
 
     def table_row_3col(self, c1, c2, c3, is_bold=False, bg=False):
-        self.set_font("ArialUni", "B" if is_bold else "", 8.0)
+        self.set_font("ArialUni", "B" if is_bold else "", 7.4)
         self.set_fill_color(241, 245, 249) if bg else self.set_fill_color(255, 255, 255)
         self.set_text_color(15, 23, 42) if is_bold else self.set_text_color(51, 65, 85)
-        self.cell(90, 5.5, c1, border=1, fill=bg, new_x=XPos.RIGHT, new_y=YPos.TOP)
-        self.cell(50, 5.5, c2, border=1, align="C", fill=bg, new_x=XPos.RIGHT, new_y=YPos.TOP)
-        self.cell(50, 5.5, c3, border=1, align="C", fill=bg, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+        self.cell(86, 5.5, c1, border=1, fill=bg, new_x=XPos.RIGHT, new_y=YPos.TOP)
+        self.cell(52, 5.5, c2, border=1, align="C", fill=bg, new_x=XPos.RIGHT, new_y=YPos.TOP)
+        self.cell(52, 5.5, c3, border=1, align="C", fill=bg, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
 
 
 def generar_tomo_i_memoria():

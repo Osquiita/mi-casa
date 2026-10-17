@@ -43,20 +43,20 @@ def draw_cajetin(ax, num_plano, titulo_plano, desc_plano, escala="1:100", caj_x=
     r = patches.Rectangle((caj_x, caj_y), caj_w, caj_h, facecolor="#FFFFFF", edgecolor=C_WALL, linewidth=1.3, zorder=40)
     ax.add_patch(r)
     ax.plot([caj_x + 6.9, caj_x + 6.9], [caj_y, caj_y + caj_h], color=C_WALL, lw=0.8, zorder=41)
-    ax.plot([caj_x + 15.6, caj_x + 15.6], [caj_y, caj_y + caj_h], color=C_WALL, lw=0.8, zorder=41)
+    ax.plot([caj_x + 16.0, caj_x + 16.0], [caj_y, caj_y + caj_h], color=C_WALL, lw=0.8, zorder=41)
     ax.plot([caj_x + 18.9, caj_x + 18.9], [caj_y, caj_y + caj_h], color=C_WALL, lw=0.8, zorder=41)
 
     ax.text(caj_x + 0.25, caj_y + 1.28, "PROYECTO BÁSICO Y DE EJECUCIÓN", fontsize=8.8, weight='bold', color=C_TEXT_MAIN, zorder=42)
     ax.text(caj_x + 0.25, caj_y + 0.85, "Vivienda Unifamiliar en PB + Espacio en Bruto en PA", fontsize=6.8, color=C_TEXT_SEC, zorder=42)
     ax.text(caj_x + 0.25, caj_y + 0.42, "Calle Moreno Torroba s/n · Palma del Río (Córdoba)", fontsize=6.8, weight='bold', color="#1E40AF", zorder=42)
 
-    ax.text(caj_x + 7.15, caj_y + 1.28, f"PLANO: {titulo_plano}", fontsize=8.2, weight='bold', color=C_TEXT_MAIN, zorder=42)
-    ax.text(caj_x + 7.15, caj_y + 0.85, desc_plano, fontsize=6.4, color=C_TEXT_SEC, zorder=42)
-    ax.text(caj_x + 7.15, caj_y + 0.42, "Documento Reglamentario CTE · Solicitud Licencia de Obras", fontsize=6.4, weight='bold', color=C_TEXT_MAIN, zorder=42)
+    ax.text(caj_x + 7.15, caj_y + 1.28, f"PLANO: {titulo_plano}", fontsize=7.4, weight='bold', color=C_TEXT_MAIN, zorder=42)
+    ax.text(caj_x + 7.15, caj_y + 0.85, desc_plano, fontsize=5.8, color=C_TEXT_SEC, zorder=42)
+    ax.text(caj_x + 7.15, caj_y + 0.42, "Documento Reglamentario CTE · Solicitud Licencia de Obras", fontsize=5.8, weight='bold', color=C_TEXT_MAIN, zorder=42)
 
-    ax.text(caj_x + 15.80, caj_y + 1.28, f"ESCALA: {escala}", fontsize=8.0, weight='bold', color=C_TEXT_MAIN, zorder=42)
-    ax.text(caj_x + 15.80, caj_y + 0.85, "FECHA: Octubre 2026", fontsize=6.6, color=C_TEXT_SEC, zorder=42)
-    ax.text(caj_x + 15.80, caj_y + 0.42, "FORMATO: DIN A3", fontsize=6.6, color=C_TEXT_SEC, zorder=42)
+    ax.text(caj_x + 16.20, caj_y + 1.28, f"ESCALA: {escala}", fontsize=8.0, weight='bold', color=C_TEXT_MAIN, zorder=42)
+    ax.text(caj_x + 16.20, caj_y + 0.85, "FECHA: Octubre 2026", fontsize=6.6, color=C_TEXT_SEC, zorder=42)
+    ax.text(caj_x + 16.20, caj_y + 0.42, "FORMATO: DIN A3", fontsize=6.6, color=C_TEXT_SEC, zorder=42)
 
     r_num = patches.Rectangle((caj_x + 18.9, caj_y), 3.10, caj_h, facecolor=C_WALL, edgecolor=C_WALL, zorder=41)
     ax.add_patch(r_num)
@@ -89,7 +89,7 @@ def draw_cota_v(ax, y1, y2, x, val_str, offset=0.18, tick=0.08):
 # ==============================================================================
 def generar_plano_emplazamiento():
     fig, ax = setup_canvas()
-    ax.set_xlim(-5.2, 17.2)
+    ax.set_xlim(-5.6, 17.2)
     ax.set_ylim(-5.5, 21.8)
 
     # Viales públicos Sur y Norte
@@ -122,10 +122,10 @@ def generar_plano_emplazamiento():
     draw_cota_v(ax, 13.00, 17.60, 12.25, "4,60 m (Norte)", offset=-0.20)
 
     # Cuadro de Justificación Urbanística a la izquierda (zorder=25 para texto sobre fondo zorder=20)
-    cs_x, cs_y = -5.00, 3.50
-    r_cuad = patches.Rectangle((cs_x, cs_y), 4.00, 9.20, facecolor="#FFFFFF", edgecolor=C_WALL, lw=0.9, zorder=20)
+    cs_x, cs_y = -5.30, 3.50
+    r_cuad = patches.Rectangle((cs_x, cs_y), 4.20, 9.20, facecolor="#FFFFFF", edgecolor=C_WALL, lw=0.9, zorder=20)
     ax.add_patch(r_cuad)
-    ax.text(cs_x + 2.00, cs_y + 8.70, "PARÁMETROS PGOU PALMA DEL RÍO", ha='center', va='center', fontsize=6.2, weight='bold', color=C_TEXT_MAIN, zorder=25)
+    ax.text(cs_x + 2.10, cs_y + 8.70, "PARÁMETROS PGOU PALMA DEL RÍO", ha='center', va='center', fontsize=6.2, weight='bold', color=C_TEXT_MAIN, zorder=25)
     datos_urb = [
         "Clasificación: Suelo Urbano Consolidado",
         "Uso Global: Residencial entre medianeras",
@@ -155,7 +155,7 @@ def generar_plano_emplazamiento():
 # ==============================================================================
 def generar_plano_planta_alta_bruto():
     fig, ax = setup_canvas()
-    ax.set_xlim(-5.2, 17.2)
+    ax.set_xlim(-5.6, 17.2)
     ax.set_ylim(-5.5, 21.8)
 
     # Contorno general de Planta Alta (11,40 x 17,60 m)
@@ -179,7 +179,7 @@ def generar_plano_planta_alta_bruto():
     ax.add_patch(r_esc)
     for sy in [0.60 + k * 0.28 for k in range(15)]:
         ax.plot([10.15, 11.15], [sy, sy], color="#475569", lw=0.6, zorder=7)
-    ax.text(10.65, 5.35, "DESEMBARCO ESCALERA\nPuerta EI2 60-C5 con llave\n(Acceso cerrado en Fase 1)", ha='center', va='bottom', fontsize=5.0, weight='bold', color="#B91C1C", zorder=10)
+    ax.text(11.15, 5.40, "DESEMBARCO ESCALERA\nPuerta EI2 60-C5 con llave\n(Acceso cerrado en Fase 1)", ha='right', va='bottom', fontsize=5.0, weight='bold', color="#B91C1C", zorder=10)
 
     # Patinillos de Preinstalaciones (Acometidas taponadas para futura adecuación)
     for px, py, txt in [(5.80, 8.20, "PATINILLO 1\nBajante Ø110 + AF/ACS\ntaponadas"), (9.60, 4.80, "PATINILLO 2\nBajante Ø110 + Tubos\neléctricos/ICT en espera")]:
@@ -211,10 +211,10 @@ def generar_plano_planta_alta_bruto():
     draw_cota_v(ax, 0.00, 17.60, -0.75, "17,60 m (LONGITUD PARCELA)")
 
     # Cuadro de superficies izquierdo
-    cs_x, cs_y = -5.00, 3.50
-    r_cuad = patches.Rectangle((cs_x, cs_y), 4.00, 8.50, facecolor="#FFFFFF", edgecolor=C_WALL, lw=0.9, zorder=20)
+    cs_x, cs_y = -5.30, 3.50
+    r_cuad = patches.Rectangle((cs_x, cs_y), 4.20, 8.50, facecolor="#FFFFFF", edgecolor=C_WALL, lw=0.9, zorder=20)
     ax.add_patch(r_cuad)
-    ax.text(cs_x + 2.00, cs_y + 8.00, "CUADRO SUPERFICIES PLANTA ALTA", ha='center', va='center', fontsize=6.0, weight='bold', color=C_TEXT_MAIN, zorder=25)
+    ax.text(cs_x + 2.10, cs_y + 8.00, "CUADRO SUPERFICIES PLANTA ALTA", ha='center', va='center', fontsize=6.0, weight='bold', color=C_TEXT_MAIN, zorder=25)
     filas_pa = [
         ("Régimen Licencia:", "Espacio en Bruto"),
         ("Uso declarado Fase 1:", "Sin uso definido"),
@@ -227,7 +227,7 @@ def generar_plano_planta_alta_bruto():
     ]
     for i, (k, v) in enumerate(filas_pa):
         ax.text(cs_x + 0.15, cs_y + 7.20 - i * 0.82, k, ha='left', va='center', fontsize=5.0, weight='bold', color="#334155", zorder=25)
-        ax.text(cs_x + 3.85, cs_y + 7.20 - i * 0.82, v, ha='right', va='center', fontsize=5.0, color="#0F172A", zorder=25)
+        ax.text(cs_x + 4.05, cs_y + 7.20 - i * 0.82, v, ha='right', va='center', fontsize=5.0, color="#0F172A", zorder=25)
 
     draw_cajetin(ax, "P-02", "PLANTA ALTA · ESPACIO DIÁFANO EN BRUTO (SIN USO)", "Envolvente Exterior Terminada, Terraza Impermeabilizada y Acometidas en Espera", "1:50")
 
@@ -242,7 +242,7 @@ def generar_plano_planta_alta_bruto():
 # ==============================================================================
 def generar_plano_cubiertas():
     fig, ax = setup_canvas()
-    ax.set_xlim(-5.2, 17.2)
+    ax.set_xlim(-5.6, 17.2)
     ax.set_ylim(-5.5, 21.8)
 
     # Base de cubierta (11,40 x 17,60 m exactos)
@@ -285,7 +285,7 @@ def generar_plano_cubiertas():
             r_pan = patches.Rectangle((px, py), 0.92, 1.55, facecolor="#1E3A8A", edgecolor="#93C5FD", lw=0.7, zorder=15)
             ax.add_patch(r_pan)
             ax.plot([px, px + 0.92], [py + 0.77, py + 0.77], color="#60A5FA", lw=0.4, zorder=16)
-    ax.text(3.45, 7.25, "CAMPO SOLAR FOTOVOLTAICO AUTOCONSUMO (10 MÓDULOS · 4,50 kWp)", ha='center', va='bottom', fontsize=5.8, weight='bold', color="#1E3A8A", zorder=17)
+    ax.text(3.45, 7.00, "CAMPO SOLAR FOTOVOLTAICO AUTOCONSUMO (10 MÓDULOS · 4,50 kWp)", ha='center', va='bottom', fontsize=5.8, weight='bold', color="#1E3A8A", zorder=17)
 
     # Unidad Exterior de Aerotermia PB + Bancada Reserva PA
     r_aero1 = patches.Rectangle((7.00, 3.20), 1.40, 0.75, facecolor="#334155", edgecolor="#0F172A", lw=0.9, zorder=15)
@@ -313,7 +313,7 @@ def generar_plano_cubiertas():
 # ==============================================================================
 def generar_plano_alzados():
     fig, ax = setup_canvas()
-    ax.set_xlim(-5.2, 17.2)
+    ax.set_xlim(-5.6, 17.2)
     ax.set_ylim(-5.5, 21.8)
 
     # 1. ALZADO PRINCIPAL SUR (Calle Moreno Torroba)
@@ -390,7 +390,7 @@ def generar_plano_alzados():
 # ==============================================================================
 def generar_plano_secciones():
     fig, ax = setup_canvas()
-    ax.set_xlim(-5.2, 17.2)
+    ax.set_xlim(-5.6, 17.2)
     ax.set_ylim(-5.5, 21.8)
 
     # 1. SECCIÓN LONGITUDINAL A-A' (Y = 0.00 a 17.60 m)
@@ -449,7 +449,7 @@ def generar_plano_secciones():
     for zx in [0.0, 5.70, 11.40]:
         r_zap = patches.Rectangle((zx - 0.70, y_sec_b - 1.50), 1.40, 0.80, facecolor="#94A3B8", edgecolor=C_WALL, lw=1.0, zorder=6)
         ax.add_patch(r_zap)
-        ax.text(zx, y_sec_b - 1.10, "ZAPATA HA-25\n1,40×1,40×0,80 m\n(-1,50 m cota apoyo)", ha='center', va='center', fontsize=4.5, weight='bold', color="#FFFFFF", zorder=25)
+        ax.text(zx, y_sec_b - 1.10, "ZAPATA HA-25\n1,40×1,40×0,80 m\n(-1,50 m cota apoyo)", ha='center', va='center', fontsize=4.0, weight='bold', color="#FFFFFF", zorder=25)
 
     ax.text(5.70, y_sec_b + 6.15, "SECCIÓN TRANSVERSAL CONSTRUCTIVA B-B' (CRUJÍA CENTRAL Y CIMENTACIÓN)", ha='center', va='bottom', fontsize=7.5, weight='bold', color=C_TEXT_MAIN, zorder=25)
 
@@ -466,7 +466,7 @@ def generar_plano_secciones():
 # ==============================================================================
 def generar_plano_estructura():
     fig, ax = setup_canvas()
-    ax.set_xlim(-5.2, 17.2)
+    ax.set_xlim(-5.6, 17.2)
     ax.set_ylim(-5.5, 21.8)
 
     # Contorno solar (11,40 x 17,60 m)
@@ -522,7 +522,7 @@ def generar_plano_estructura():
     ax.text(0.75, -0.80, "ACOMETIDA GENERAL AL ALCANTARILLADO MUNICIPAL (Ø200)", ha='center', va='top', fontsize=5.5, weight='bold', color="#DC2626", zorder=25)
 
     # Cuadro de características estructurales CON zorder=25 EN TEXTOS
-    cs_x, cs_y = -4.80, 3.50
+    cs_x, cs_y = -5.30, 3.50
     patches_rect = patches.Rectangle((cs_x, cs_y), 4.20, 8.00, facecolor="#FFFFFF", edgecolor=C_WALL, lw=0.9, zorder=20)
     ax.add_patch(patches_rect)
     ax.text(cs_x + 2.10, cs_y + 7.50, "CUADRO DE CONTROL DE ESTRUCTURA", ha='center', va='center', fontsize=6.2, weight='bold', color=C_TEXT_MAIN, zorder=25)
@@ -553,7 +553,7 @@ def generar_plano_estructura():
 # ==============================================================================
 def generar_plano_instalaciones():
     fig, ax = setup_canvas()
-    ax.set_xlim(-5.2, 17.2)
+    ax.set_xlim(-5.6, 17.2)
     ax.set_ylim(-5.5, 21.8)
 
     r_sol = patches.Rectangle((0.00, 0.00), 11.40, 17.60, facecolor="#F8FAFC", edgecolor=C_WALL, lw=1.0, zorder=2)
@@ -582,9 +582,9 @@ def generar_plano_instalaciones():
     ax.text(5.50, 8.50, "RED GENERAL DE AGUA FRÍA Y RETORNO ACS (PEX Ø25)", ha='center', va='center', fontsize=5.2, color="#0284C7", rotation=90, zorder=25)
 
     # 3. Ventilación Mecánica Controlada VMC (DB-HS3)
-    r_vmc = patches.Rectangle((9.50, 16.00), 0.80, 0.60, facecolor="#10B981", edgecolor="#047857", lw=0.8, zorder=10)
+    r_vmc = patches.Rectangle((8.40, 15.80), 0.90, 0.65, facecolor="#10B981", edgecolor="#047857", lw=0.8, zorder=10)
     ax.add_patch(r_vmc)
-    ax.text(9.90, 16.30, "VMC DOBLE FLUJO\n(Eficiencia > 85%)", ha='center', va='center', fontsize=4.5, weight='bold', color="#FFFFFF", zorder=25)
+    ax.text(8.85, 16.12, "VMC DOBLE FLUJO\n(Eficiencia > 85%)", ha='center', va='center', fontsize=4.5, weight='bold', color="#FFFFFF", zorder=25)
 
     extracciones = [(2.00, 8.50), (5.50, 8.50), (9.00, 2.00)]
     for ex_x, ex_y in extracciones:
@@ -605,7 +605,7 @@ def generar_plano_instalaciones():
         ax.text(ext_x, ext_y, "EXT", ha='center', va='center', fontsize=4.5, weight='bold', color="#FFFFFF", zorder=25)
 
     # Leyenda de instalaciones CON zorder=25 EN TEXTOS
-    cs_x, cs_y = -4.80, 2.50
+    cs_x, cs_y = -5.30, 2.50
     patches_rect = patches.Rectangle((cs_x, cs_y), 4.20, 8.50, facecolor="#FFFFFF", edgecolor=C_WALL, lw=0.9, zorder=20)
     ax.add_patch(patches_rect)
     ax.text(cs_x + 2.10, cs_y + 8.10, "SIMBOLOGÍA DE INSTALACIONES (CTE)", ha='center', va='center', fontsize=6.2, weight='bold', color=C_TEXT_MAIN, zorder=25)
