@@ -272,8 +272,9 @@ def generar_plano_v6_suite_optimizada():
     draw_sliding_door(ax, 3.90, 9.80, 4.70, 9.80, "Corredera 80")
     draw_door_cad(ax, 1.20, 10.00, 0.85, 0, 90, "Suite 82.5")
     draw_door_cad(ax, 0.80, 13.55, 0.85, 0, 90, "82.5")
-    draw_door_cad(ax, 3.40, 13.55, 0.85, 0, 90, "82.5")
-    draw_door_cad(ax, 6.40, 13.20, 0.85, -90, 0, "82.5")
+    # Puerta Cortafuegos Garaje (Local Riesgo Especial Bajo DB-SI 1)
+    draw_door_cad(ax, 6.40, 13.20, 0.85, -90, 0, "EI2 60-C5")
+    ax.text(6.45, 12.80, "Puerta EI2 60-C5 (Cierrapuertas)", ha='left', va='center', fontsize=4.2, weight='bold', color="#B91C1C", zorder=30)
 
     # 5. MOBILIARIO ARQUITECTÓNICO
 
@@ -542,28 +543,29 @@ def generar_plano_v6_suite_optimizada():
     ax.text(sg_x + 1.0, sg_y + 0.30, "ESCALA GRÁFICA 1:50", ha='center', va='bottom', fontsize=6.2, weight='bold', color=C_TEXT_MAIN)
 
     # 10. CUADRO DE SUPERFICIES RESUMEN
-    cs_x, cs_y, cs_w, cs_h = -4.80, 0.80, 2.80, 10.20
+    cs_x, cs_y, cs_w, cs_h = -5.00, 0.80, 3.80, 10.20
     draw_rect(ax, cs_x, cs_y, cs_w, cs_h, "#FFFFFF", edge_col=C_WALL, lw=0.9, z=30)
     draw_rect(ax, cs_x, cs_y + cs_h - 0.50, cs_w, 0.50, C_WALL, edge_col=C_WALL, z=31)
-    ax.text(cs_x + cs_w/2, cs_y + cs_h - 0.25, "CUADRO DE SUPERFICIES", ha='center', va='center', fontsize=6.8, weight='bold', color="#FFFFFF", zorder=32)
+    ax.text(cs_x + cs_w/2, cs_y + cs_h - 0.25, "CUADRO DE SUPERFICIES PLANTA BAJA", ha='center', va='center', fontsize=6.4, weight='bold', color="#FFFFFF", zorder=32)
 
     cuadro_items = [
         ("Salón-Comedor", "38,50 m²"),
         ("Cocina con Isla", "18,72 m²"),
         ("Master Suite (D1)", "15,10 m²"),
         ("Baño en Suite", "5,57 m²"),
-        ("Baño Común", "5,68 m²"),
+        ("Baño General", "5,68 m²"),
         ("Dormitorio 2", "11,70 m²"),
         ("Dormitorio 3", "11,90 m²"),
-        ("Pasillo Distrib.", "7,32 m²"),
+        ("Pasillo Distribuidor", "7,32 m²"),
         ("Cochera/Trastero", "21,14 m²"),
+        ("Zaguán Escalera PA", "4,80 m²"),
         ("---", "---"),
-        ("TOTAL CERRADA", "137,0 m²"),
+        ("TOTAL ÚTIL CERRADA", "140,43 m²"),
         ("Porche Cubierto", "11,40 m²"),
-        ("Patio + Piscina", "26,36 m²"),
-        ("TOTAL EXTERIOR", "37,8 m²"),
+        ("Patio + Piscina", "28,73 m²"),
+        ("TOTAL LIBRE SOLAR", "40,13 m² (20%)"),
         ("=== ", "=== "),
-        ("SUP. CONSTRUIDA", "196,8 m²"),
+        ("SUP. CONSTRUIDA PB", "160,51 m² (80%)"),
     ]
 
     iy = cs_y + cs_h - 0.85
@@ -574,33 +576,33 @@ def generar_plano_v6_suite_optimizada():
             continue
         is_bold = "TOTAL" in nombre or "CONSTRUIDA" in nombre
         col = C_DIM if is_bold else C_TEXT_MAIN
-        fs = 6.0 if is_bold else 5.2
+        fs = 5.8 if is_bold else 5.2
         ax.text(cs_x + 0.15, iy, nombre, ha='left', va='center', fontsize=fs, weight='bold' if is_bold else 'normal', color=col, zorder=32)
         ax.text(cs_x + cs_w - 0.15, iy, sup, ha='right', va='center', fontsize=fs, weight='bold' if is_bold else 'normal', color=col, zorder=32)
-        iy -= 0.50
+        iy -= 0.48
 
     # 11. CAJETÍN OFICIAL DE ARQUITECTURA
-    caj_x, caj_y, caj_w, caj_h = -4.80, -4.90, 21.80, 1.70
+    caj_x, caj_y, caj_w, caj_h = -5.00, -4.90, 22.00, 1.75
     draw_rect(ax, caj_x, caj_y, caj_w, caj_h, "#FFFFFF", edge_col=C_WALL, lw=1.3, z=40)
     
-    ax.plot([caj_x + 6.8, caj_x + 6.8], [caj_y, caj_y + caj_h], color=C_WALL, lw=0.8, zorder=41)
-    ax.plot([caj_x + 15.0, caj_x + 15.0], [caj_y, caj_y + caj_h], color=C_WALL, lw=0.8, zorder=41)
-    ax.plot([caj_x + 18.6, caj_x + 18.6], [caj_y, caj_y + caj_h], color=C_WALL, lw=0.8, zorder=41)
+    ax.plot([caj_x + 6.9, caj_x + 6.9], [caj_y, caj_y + caj_h], color=C_WALL, lw=0.8, zorder=41)
+    ax.plot([caj_x + 15.6, caj_x + 15.6], [caj_y, caj_y + caj_h], color=C_WALL, lw=0.8, zorder=41)
+    ax.plot([caj_x + 18.9, caj_x + 18.9], [caj_y, caj_y + caj_h], color=C_WALL, lw=0.8, zorder=41)
 
     # Bloque 1: Identificación del Proyecto
-    ax.text(caj_x + 0.30, caj_y + 1.25, "PROYECTO RESIDENCIAL BIFAMILIAR", fontsize=10.5, weight='bold', color=C_TEXT_MAIN, zorder=42)
-    ax.text(caj_x + 0.30, caj_y + 0.85, "Vivienda Unifamiliar en Parcela Pasante con Patio y Piscina", fontsize=7.2, color=C_TEXT_SEC, zorder=42)
-    ax.text(caj_x + 0.30, caj_y + 0.45, "Calle Moreno Torroba s/n · Palma del Río (Córdoba)", fontsize=7.2, weight='bold', color="#1E40AF", zorder=42)
+    ax.text(caj_x + 0.25, caj_y + 1.28, "PROYECTO BÁSICO Y DE EJECUCIÓN", fontsize=8.8, weight='bold', color=C_TEXT_MAIN, zorder=42)
+    ax.text(caj_x + 0.25, caj_y + 0.85, "Vivienda Unifamiliar en PB + Espacio en Bruto en PA", fontsize=6.8, color=C_TEXT_SEC, zorder=42)
+    ax.text(caj_x + 0.25, caj_y + 0.42, "Calle Moreno Torroba s/n · Palma del Río (Córdoba)", fontsize=6.8, weight='bold', color="#1E40AF", zorder=42)
 
     # Bloque 2: Datos del Plano
-    ax.text(caj_x + 7.10, caj_y + 1.25, "PLANO: PLANTA BAJA AMUEBLADA Y ACOTADA", fontsize=9.5, weight='bold', color=C_TEXT_MAIN, zorder=42)
-    ax.text(caj_x + 7.10, caj_y + 0.85, "Distribución Optimizada · Master Suite con Pasos Amplios + Vestidor 2,50 m", fontsize=6.8, color=C_TEXT_SEC, zorder=42)
-    ax.text(caj_x + 7.10, caj_y + 0.45, "Superficie Útil Cerrada: 137,00 m² | Exterior: 37,80 m² | Constr.: 196,80 m²", fontsize=6.8, weight='bold', color=C_TEXT_MAIN, zorder=42)
+    ax.text(caj_x + 7.15, caj_y + 1.28, "PLANO: P-01 PLANTA BAJA AMUEBLADA Y ACOTADA", fontsize=8.2, weight='bold', color=C_TEXT_MAIN, zorder=42)
+    ax.text(caj_x + 7.15, caj_y + 0.85, "Distribución Optimizada · Master Suite con Pasos Amplios + Garaje Trasero", fontsize=6.4, color=C_TEXT_SEC, zorder=42)
+    ax.text(caj_x + 7.15, caj_y + 0.42, "S.Útil: 140,43 m² | Ocupación: 160,51 m² (80,0 % PGOU) | Patio: 40,13 m²", fontsize=6.4, weight='bold', color=C_TEXT_MAIN, zorder=42)
 
     # Bloque 3: Escala y Fecha
-    ax.text(caj_x + 15.30, caj_y + 1.25, "ESCALA: 1:50 (A3)", fontsize=8.5, weight='bold', color=C_TEXT_MAIN, zorder=42)
-    ax.text(caj_x + 15.30, caj_y + 0.85, "FECHA: Agosto 2026", fontsize=7.0, color=C_TEXT_SEC, zorder=42)
-    ax.text(caj_x + 15.30, caj_y + 0.45, "FORMATO: DIN A3", fontsize=6.8, color=C_TEXT_SEC, zorder=42)
+    ax.text(caj_x + 15.80, caj_y + 1.28, "ESCALA: 1:50", fontsize=8.0, weight='bold', color=C_TEXT_MAIN, zorder=42)
+    ax.text(caj_x + 15.80, caj_y + 0.85, "FECHA: Octubre 2026", fontsize=6.6, color=C_TEXT_SEC, zorder=42)
+    ax.text(caj_x + 15.80, caj_y + 0.42, "FORMATO: DIN A3", fontsize=6.6, color=C_TEXT_SEC, zorder=42)
 
     # Bloque 4: Número de Plano
     draw_rect(ax, caj_x + 18.6, caj_y, 3.20, caj_h, C_WALL, edge_col=C_WALL, z=41)
