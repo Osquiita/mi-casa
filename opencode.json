@@ -1,39 +1,19 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "mcp": {
-    "aiblueprint": {
+    "arquitectura-mi-casa": {
       "type": "local",
-      "command": ["python", "-m", "aiblueprint_mcp"],
+      "command": [
+        "C:\\Users\\Oscar Martinez\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tools/mcp_arquitectura_server.py"
+      ],
       "enabled": true,
-      "env": {
-        "AIBLUEPRINT_LIBRECAD_BIN": "C:\\Program Files\\LibreCAD\\LibreCAD.exe",
-        "AIBLUEPRINT_WORKSPACE": "C:\\Users\\Oscar Martinez\\Desktop\\mi-casa"
-      }
-    },
-    "architecture": {
-      "type": "local",
-      "command": ["npx", "architecture-mcp"],
-      "enabled": true
-    },
-    "blender-mcp": {
-      "type": "local",
-      "command": ["C:\\Users\\Oscar Martinez\\.local\\bin\\uvx.exe", "--python", "3.11", "blender-mcp"],
-      "enabled": true,
-      "env": {
-        "BLENDER_HOST": "localhost",
+      "environment": {
+        "BLENDER_HOST": "127.0.0.1",
         "BLENDER_PORT": "9876",
-        "DISABLE_TELEMETRY": "true"
-      }
-    },
-    "sketchup-mcp": {
-      "type": "local",
-      "command": ["C:\\Users\\Oscar Martinez\\.local\\bin\\uvx.exe", "--python", "3.11", "sketchup-mcp2"],
-      "enabled": true,
-      "env": {
-        "SKETCHUP_MCP_HOST": "127.0.0.1",
-        "SKETCHUP_MCP_PORT": "9876",
-        "SKETCHUP_MCP_TIMEOUT": "60",
-        "SKETCHUP_MCP_LOG_LEVEL": "INFO"
+        "SKETCHUP_HOST": "127.0.0.1",
+        "SKETCHUP_PORT": "9877",
+        "PYTHONPATH": "."
       }
     }
   }
