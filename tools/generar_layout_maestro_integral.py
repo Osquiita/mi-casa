@@ -47,12 +47,12 @@ PAGES_CONFIG = [
     ("P-05: Secciones Constructivas A-A y B-B", str(PLANOS_DIR / "05_plano_secciones.png")),
     ("P-06: Estructura, Cimentación y Saneamiento", str(PLANOS_DIR / "06_plano_estructura.png")),
     ("P-07: Instalaciones Generales CTE", str(PLANOS_DIR / "07_plano_instalaciones.png")),
-    ("R-01: Render Fachada Principal Sur", str(RENDERS_DIR / "01-fachada-principal.png")),
-    ("R-02: Render Patio Central y Piscina", str(RENDERS_DIR / "05-patio-central.png")),
-    ("R-03: Render Interior Salón-Comedor PB", str(RENDERS_DIR / "06-interior-salon-pb.png")),
-    ("R-04: Render Cocina con Isla PB", str(RENDERS_DIR / "07-interior-cocina-pb.png")),
-    ("R-05: Render Master Suite", str(RENDERS_DIR / "08-dormitorio-principal.png")),
-    ("R-06: Render Axonometría 3D Edificada", str(RENDERS_DIR / "04-vista-axonometrica.png")),
+    ("R-01: Render 3D Fachada Principal Sur", str(RENDERS_DIR / "pro-fachada.png")),
+    ("R-02: Render 3D Perspectiva Fachada Esquina", str(RENDERS_DIR / "pro-fachada2.png")),
+    ("R-03: Render 3D Patio Central y Piscina", str(RENDERS_DIR / "pro-patios.png")),
+    ("R-04: Render 3D Interior Salón y Cocina PB", str(RENDERS_DIR / "pro-interior-pb.png")),
+    ("R-05: Render 3D Fachada Trasera Garaje", str(RENDERS_DIR / "pro-trasera.png")),
+    ("R-06: Render 3D Axonometría Global", str(RENDERS_DIR / "pro-axo.png")),
 ]
 
 def build_layout_file(dest_path):
